@@ -1,43 +1,71 @@
-# Xiaobai Workflow Enforcer
+# Workflow Enforcer 🔒
 
-> Mandatory workflows for AI Agents. Design before code. Test before implement. Verify before claim.
+> Mandatory workflows for AI agents
 
-## 🎯 Problem
+**Inspired by Superpowers (161K stars)** — the framework that proved enforcement is the killer feature.
 
-AI agents often:
-- Jump straight to coding without planning
-- Skip testing and claim "done"
-- Don't verify their outputs
-- Over-promise and under-deliver
+## The 5 Gates
 
-## ✅ The Workflow
+Every task MUST pass through these gates:
 
-### Phase 1: Design First
-Before writing any code:
-- State the problem clearly
-- List possible approaches
-- Choose an approach and justify
-- Define success criteria
+```
+GATE 1: DESIGN
+├── What problem are we solving?
+├── What's the simplest solution?
+└── Output: Design doc
 
-### Phase 2: Implement
-- Write minimal code for the chosen approach
-- One step at a time
-- Checkpoint frequently
+GATE 2: PLAN
+├── Break into atomic tasks
+├── Identify dependencies
+└── Output: Task list
 
-### Phase 3: Test
-- Write tests for the implementation
-- Run tests and verify pass
-- Test edge cases
+GATE 3: TDD
+├── Write test first
+├── Run test (should fail)
+└── Output: Failing test
 
-### Phase 4: Verify & Report
-- Confirm the original goal is met
-- Report with evidence, not claims
-- Document what was done
+GATE 4: EXECUTE
+├── Write minimal code
+├── Run test (should pass)
+└── Output: Working code
 
-## 🔑 Trigger Words
+GATE 5: VERIFY
+├── All tests pass
+├── No regressions
+└── Output: Verified feature
+```
 
-`workflow`, `process`, `follow steps`, `do it right`, `properly`
+## Why Enforcement Works
 
-## 📄 License
+| Without Enforcement | With Enforcement |
+|---------------------|------------------|
+| "I'll do it properly later" | Must do it properly now |
+| Skip tests "just this once" | Tests are mandatory |
+| Half-finished refactors | Complete or don't start |
+| "It works on my machine" | Verified before merge |
+
+## Quick Start
+
+```
+# The gates are automatic
+# Just start working, and the workflow will enforce:
+
+1. Ask "what are we building?" → DESIGN gate
+2. Ask "what are the steps?" → PLAN gate
+3. Generate test first → TDD gate
+4. Write code → EXECUTE gate
+5. Run all tests → VERIFY gate
+```
+
+## Anti-Rationalization Table
+
+| Common Excuse | Reality |
+|---------------|---------|
+| "Tests slow me down" | Bugs slow you down more |
+| "I'll add tests later" | You won't |
+| "This is just a quick fix" | Quick fixes create tech debt |
+| "I know it works" | How do you know? |
+
+## License
 
 MIT
